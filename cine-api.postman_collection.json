@@ -1,0 +1,242 @@
+{
+  "info": {
+    "name": "cine-api",
+    "_postman_id": "cine-api-collection-001",
+    "description": "Coleccion Postman para cine-api (sin tildes)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET / (bienvenida)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Peliculas - POST /api/pelicula",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/pelicula",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "pelicula"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Matrix\",\n  \"generos\": [\n    \"Accion\",\n    \"Ciencia ficcion\"\n  ],\n  \"anioEstreno\": 1999\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Peliculas - GET /api/peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Peliculas - GET /api/pelicula/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/pelicula/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "pelicula",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Peliculas - PUT /api/pelicula/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/pelicula/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "pelicula",
+            ":id"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Matrix Reloaded\",\n  \"generos\": [\n    \"Accion\"\n  ],\n  \"anioEstreno\": 2003\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Peliculas - DELETE /api/pelicula/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/pelicula/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "pelicula",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actores - POST /api/actor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/actor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actor"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"idPelicula\": \"Matrix\",\n  \"nombre\": \"Keanu Reeves\",\n  \"edad\": 59,\n  \"estaRetirado\": false,\n  \"premios\": []\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actores - GET /api/actores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/actores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actores - GET /api/actor/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/actor/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actor",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actores - GET /api/actor/pelicula/:idPelicula",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/actor/pelicula/:idPelicula",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actor",
+            "pelicula",
+            ":idPelicula"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
